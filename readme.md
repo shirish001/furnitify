@@ -3,37 +3,61 @@ This project is an online furniture store showcasing a variety of furniture item
 
 🌟 Features
 Product Catalog: Browse a wide range of furniture items with detailed descriptions, prices, and images.
+
 Search Functionality: Easily search for specific items within the catalog.
+
 Shopping Cart: Add, update, and remove items from the shopping cart.
+
 Order Management: Users can place orders, view order history, and track the status of their orders.
+
 Responsive Design: Optimized for all devices including desktops, tablets, and mobile phones.
+
 Payment Integration: Secure payment processing using Stripe API (in test mode).
+
 🛠️ Technologies Used
+
 Frontend:
+
 HTML5: Markup language for structuring the content.
+
 CSS3: Styling the application to provide a visually appealing interface.
+
 EJS (Embedded JavaScript): Templating engine for generating HTML markup with dynamic data.
+
 Backend:
+
 Node.js: Server-side runtime environment for handling requests and performing backend logic.
+
 Express.js: Web framework for Node.js to build the API and handle routing.
+
 MongoDB: NoSQL database for storing user data, product details, and orders. (MongoDB Atlas used for remote connection)
-Mongoose: ODM (Object Data Modeling) library for MongoDB to facilitate data manipulation.
+
 Authentication:
+
 cookies-session, using the express-session package.
+
 Payment Gateway:
+
 Stripe API: Integration for handling online payments (in test mode).
+
 🚀 Getting Started
+
 Prerequisites
+
 Node.js installed on your local machine.
+
 MongoDB Atlas account for the remote database connection.
+
 Stripe account for payment processing (test mode).
+
 Installation
+
 Clone the repository:
 
-bash
-Copy code
 git clone https://github.com/shirish001/online-furniture-shop.git
+
 cd online-furniture-shop
+
 Install dependencies:
 
 Run the following command to install all the required Node.js packages:
@@ -47,8 +71,11 @@ Create a .env file in the root of your project directory. This file will store y
 Add the following values to your .env file:
 
 MONGODB_URI= "your_mongodb_atlas_connection_string_here"
+
 STRIPE_SECRET_KEY= "your_stripe_secret_key_here"
+
 PORT=
+
 You can obtain your MongoDB Atlas connection string from the MongoDB Atlas dashboard. Navigate to your cluster, click "Connect," and select "Connect your application" to copy the connection string.
 
 You can get your Stripe secret key from the Stripe Dashboard. Be sure to use the test mode key for development.
@@ -75,4 +102,4 @@ db.users.updateOne(
 Alternatively, directly add the isAdmin field in the document in atlas to update the user authorization.
 
 💡 Notes:
-The default connection port is 3000, so the application will be available at http://localhost:port when running locally.
+The application will be available at http://localhost:port when running locally.
