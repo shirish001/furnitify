@@ -1,6 +1,7 @@
 require("dotenv").config(); // Load environment variables from .env file
+const port = process.env.PORT;
 
-const path = require("path"); //
+const path = require("path");
 
 const express = require("express");
 const csrf = require("csurf");
@@ -67,7 +68,7 @@ app.use(errorHandlerMiddleware);
 db.connectToDatabase()
   .then(function () {
     console.log("listening for incoming req on port 3000!");
-    app.listen(3000);
+    app.listen(port);
   })
   .catch(function (error) {
     console.log("Failed to connect to the database!");

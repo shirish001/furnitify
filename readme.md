@@ -48,6 +48,7 @@ Add the following values to your .env file:
 
 MONGODB_URI= "your_mongodb_atlas_connection_string_here"
 STRIPE_SECRET_KEY= "your_stripe_secret_key_here"
+PORT=
 You can obtain your MongoDB Atlas connection string from the MongoDB Atlas dashboard. Navigate to your cluster, click "Connect," and select "Connect your application" to copy the connection string.
 
 You can get your Stripe secret key from the Stripe Dashboard. Be sure to use the test mode key for development.
@@ -59,7 +60,7 @@ Once the dependencies are installed and the .env file is set up, you can start t
 npm start
 Access the application:
 
-Open your browser and navigate to http://localhost:3000 to view the application.
+Open your browser and navigate to http://localhost:port to view the application.
 
 🔑 Default User Role
 By default, a newly created user will be assigned the customer role.
@@ -74,4 +75,4 @@ db.users.updateOne(
 Alternatively, directly add the isAdmin field in the document in atlas to update the user authorization.
 
 💡 Notes:
-The default connection port is 3000, so the application will be available at http://localhost:3000 when running locally.
+The default connection port is 3000, so the application will be available at http://localhost:port when running locally.
