@@ -42,13 +42,13 @@ app.use(express.json()); // to parse json data (for API calls or data sent in js
 const sessionConfig = createSessionConfig();
 
 app.use(expressSession(sessionConfig));
-app.use(csrf());
+app.use(csrf()); // middleware that creates the token
 
 // added after session config because it uses session
 app.use(cartMiddleware);
 app.use(updateCartPricesMiddleware);
 
-app.use(addCsrfTokenMiddleware);
+app.use(addCsrfTokenMiddleware); // middleware that puts the token in res.locals
 app.use(checkAuthStatusMiddleware);
 
 app.use(baseRoutes);
